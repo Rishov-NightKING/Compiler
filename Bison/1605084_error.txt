@@ -1,0 +1,6 @@
+Error at line no : 6  Function Return Type Mismatch
+
+Error at line no : 6  Conflict in number of parameters of function : foo 
+
+
+Total errros : 2

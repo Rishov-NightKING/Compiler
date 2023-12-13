@@ -1,0 +1,11 @@
+int foo()
+{
+
+}
+void func();
+void foo(int a);
+
+int main()
+{
+	func();
+}

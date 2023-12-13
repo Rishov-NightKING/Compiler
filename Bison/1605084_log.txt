@@ -1,0 +1,179 @@
+
+
+New ScopeTable with id 1 created
+
+At line no : 1 type_specifier : INT
+int 
+
+At line no : 4 compound_statement : LCURL RCURL
+{}
+
+
+At line no : 4 func_definition : type_specifier ID LPAREN RPAREN compound_statement
+int foo()
+{}
+
+
+At line no : 4 unit : func definition
+int foo()
+{}
+
+
+At line no : 4 program : unit
+int foo()
+{}
+
+
+At line no : 5 type_specifier : VOID
+void  
+
+At line no : 5 func_declaration : type_specifier ID LPAREN RPAREN SEMICOLON
+void func();
+
+
+At line no : 5 unit : func_declaration
+void func();
+
+
+At line no : 5 program : program unit
+int foo()
+{}
+
+void func();
+
+
+At line no : 6 type_specifier : VOID
+void  
+
+At line no : 6 type_specifier : INT
+int 
+
+At line no : 6 parameter_list : type_specifier ID
+int a
+
+At line no : 6 func_declaration : type_specifier ID LPAREN parameter_list RPAREN SEMICOLON
+void foo(int a);
+
+
+At line no : 6 unit : func_declaration
+void foo(int a);
+
+
+At line no : 6 program : program unit
+int foo()
+{}
+void func();
+
+void foo(int a);
+
+
+At line no : 8 type_specifier : INT
+int 
+
+
+
+New ScopeTable with id 2 created
+
+At line no : 10  argument_list : (empty) 
+
+At line no : 10 factor : ID LPAREN argument_list RPAREN
+func()
+
+At line no : 10 unary_expression : factor
+func()
+
+At line no : 10 term : unary_expression
+func()
+
+At line no : 10 simple_expression : term
+func()
+
+At line no : 10 rel_expression : simple_expression
+func()
+
+At line no : 10 logic_expression : rel_expression
+func()
+
+At line no : 10 expression : logic_expression
+func()
+
+At line no : 10 expression_statement : expression SEMICOLON
+func();
+
+At line no : 10 statement : expression_statement
+func();
+
+At line no : 10 statements : statement
+func();
+
+At line no : 11 compound_statement : LCURL statements RCURL
+{
+func();
+}
+
+
+ScopeTable# 2
+
+ScopeTable# 1
+
+4 :-->  <  name(foo) : ID(FUNCTION),  type(INT) >
+
+8 :-->  <  name(func) : ID(FUNCTION),  type(VOID) >
+
+
+
+ScopeTable with id 2 removed
+
+At line no : 11 func_definition : type_specifier ID LPAREN RPAREN compound_statement
+int main()
+{
+func();
+}
+
+
+At line no : 11 unit : func definition
+int main()
+{
+func();
+}
+
+
+At line no : 11 program : program unit
+int foo()
+{}
+void func();
+void foo(int a);
+
+int main()
+{
+func();
+}
+
+
+At line no : 12 start : program
+int foo()
+{}
+void func();
+void foo(int a);
+int main()
+{
+func();
+}
+
+
+
+
+Symbol Table :
+
+ScopeTable# 1
+
+1 :-->  <  name(main) : ID(FUNCTION),  type(INT) >
+
+4 :-->  <  name(foo) : ID(FUNCTION),  type(INT) >
+
+8 :-->  <  name(func) : ID(FUNCTION),  type(VOID) >
+
+
+Total lines : 12
+
+Total errros : 2

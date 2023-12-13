@@ -1,0 +1,14 @@
+int f(void i);
+
+int f(void i)
+{
+    return 7;
+}
+
+
+int main()
+{
+    int u;
+    u = f(9);
+
+}
