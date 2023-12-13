@@ -1,0 +1,18 @@
+int f(int i);
+int f(int i)
+{
+    return 7;
+}
+
+int func()
+{
+int a,b;
+return a;
+}
+
+int main()
+{
+    int u;
+    u = f(9);
+
+}
